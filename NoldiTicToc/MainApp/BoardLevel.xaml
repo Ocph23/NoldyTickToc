@@ -1,0 +1,57 @@
+﻿<Window x:Class="MainApp.BoardLevel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainApp" 
+         WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="Tingkatan" Height="500" Width="700">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/rumput1.jpg"/>
+    </Window.Background>
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="290*"/>
+            <RowDefinition Height="57*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="auto" MinHeight="57"/>
+            </Grid.RowDefinitions>
+            <Border BorderThickness="4" Name="easy" Margin="30" PreviewMouseDown="Border_PreviewMouseDown" BorderBrush="#FF007ACC" >
+                <Border.Background>
+                    <ImageBrush ImageSource="Images/board3.png"/>
+                </Border.Background>
+            </Border>
+            <Label HorizontalContentAlignment="Center" Content="MUDAH" HorizontalAlignment="Center" Width="100"  VerticalAlignment="Top"  Grid.Row="1" Height="26"  FontWeight="Bold" Background="#FFA5ECF3"></Label>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="auto" MinHeight="57"/>
+            </Grid.RowDefinitions>
+            <Border Margin="30" Name="hard" PreviewMouseDown="hard_PreviewMouseDown" BorderBrush="#FF007ACC">
+                <Border.Background>
+                    <ImageBrush ImageSource="Images/board4.png"/>
+                </Border.Background>
+            </Border>
+            <Label HorizontalContentAlignment="Center" Content="SULIT" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100"  Grid.Row="1" FontWeight="Bold" Background="#FFA5ECF3"></Label>
+        </Grid>
+
+        <Grid  Grid.ColumnSpan="2">
+            <TextBlock  Text="Pilih Tingkat" FontSize="50" HorizontalAlignment="Center"  VerticalAlignment="Center" FontFamily="Script MT Bold" FontWeight="Bold" Foreground="#FF2C2C2B" />
+            <TextBlock  Text="Pilih Tingkat" FontSize="48" HorizontalAlignment="Center"  VerticalAlignment="Center" FontFamily="Script MT Bold" FontWeight="Bold" Foreground="#FFCC880A" />
+        </Grid>
+
+        <Button Content="MULAI MAIN"  Click="Button_Click" Width="100" Grid.Row="2" Grid.ColumnSpan="2" Background="#FFA5ECF3" FontWeight="Bold"></Button>
+
+    </Grid>
+</Window>

@@ -1,0 +1,51 @@
+﻿<Window x:Class="MainApp.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainApp"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Main" Height="500" Width="700">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/rumput1.jpg"/>
+    </Window.Background>
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <TextBlock  Text="Dam Daman" FontSize="50" HorizontalAlignment="Center"  VerticalAlignment="Center" FontFamily="Script MT Bold" FontWeight="Bold" Foreground="#FF2C2C2B" />
+            <TextBlock  Text="Dam Daman" FontSize="48" HorizontalAlignment="Center"  VerticalAlignment="Center" FontFamily="Script MT Bold" FontWeight="Bold" Foreground="#FFCC880A" />
+        </Grid>
+        <Border Grid.Row="1" Padding="20">
+            <Image Source="Images/board3.png"/>
+
+        </Border>
+
+        <Grid Grid.Row="2">
+
+            <WrapPanel HorizontalAlignment="Center"  VerticalAlignment="Center">
+                <Button Content="1P VS COM"  Click="Button_Click"  FontWeight="Bold"></Button>
+                <Button Content="1P VS 2P" Click="Button_Click_2"  FontWeight="Bold"></Button>
+
+            </WrapPanel>
+            <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="50" Click="Button_Click_1"  FontWeight="Bold" BorderBrush="White">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/264845.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="50" Click="score_click"  FontWeight="Bold" BorderBrush="White">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/scoreboard.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+            </WrapPanel>
+
+        </Grid>
+
+    </Grid>
+</Window>

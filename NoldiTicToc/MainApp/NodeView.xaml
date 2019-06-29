@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="MainApp.NodeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MainApp" 
+             mc:Ignorable="d" >
+    <Grid >
+        <Label Content="{Binding NodeName}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" />
+        <Ellipse Name="node" Width="{Binding Width}" Height="{Binding Height}"  MouseLeftButtonDown="Ellipse_MouseLeftButtonDown" >
+            <Ellipse.Fill>
+                <RadialGradientBrush Opacity="0.5">
+                    <GradientStop Color="Transparent" Offset="1"/>
+                    <GradientStop Color="#FF83E8F5"/>
+                    <GradientStop Color="#FF556361" Offset="0.286"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        
+    </Grid>
+</UserControl>

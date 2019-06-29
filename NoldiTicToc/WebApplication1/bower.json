@@ -1,0 +1,6 @@
+{
+  "name": "myproject",
+  "dependencies": {
+    "vis": "^4.21.0"
+  }
+}
